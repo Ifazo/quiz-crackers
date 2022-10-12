@@ -11,9 +11,8 @@ const Home = () => {
 
     return (
         <div>
-            {
-                quizData.map(quiz => <Quiz key={quizData.id} quiz={quiz}></Quiz>)
-            }
+                    <img src='../header-img.webp' alt="header-img" />
+                    <div>{quizData.map(quiz => <Quiz key={quizData.id} quiz={quiz}></Quiz>)}</div>
         </div>
     );
 };

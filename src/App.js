@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './App.css';
 import Blog from './components/Blog';
 import Error from './components/Error';
 import Main from '../src/outlet/Main';
@@ -22,10 +21,6 @@ function App() {
           loader: () => fetch('https://openapi.programming-hero.com/api/quiz')
         },
         {
-          path: '/topics',
-          element: <Topics></Topics>
-        },
-        {
           path: '/blog',
           element: <Blog></Blog>
         },
@@ -43,7 +38,7 @@ function App() {
   ])
 
   return (
-    <div className="App">
+    <div className="App text-center">
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
