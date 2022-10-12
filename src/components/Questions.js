@@ -1,4 +1,5 @@
-import { Icon } from "@mui/material";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Questions = (quest) => {
 
@@ -9,9 +10,11 @@ const Questions = (quest) => {
         // console.log(e.target.innerText);
         // console.log(correctAnswer);
         if (e.target.innerText === correctAnswer) {
-            alert('Correct Answer');
+            // alert('Correct Answer');
+            toast("Right Answer!");
         } else {
-            alert('Wrong Answer');
+            // alert('Wrong Answer');
+            toast("Wrong Answer!");
         }
     }
 
@@ -19,6 +22,7 @@ const Questions = (quest) => {
         <div>
             <div>{question}</div>
             {options.map(option => <button onClick={handleAnswer}>{option}</button>)}
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
