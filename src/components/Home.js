@@ -11,7 +11,7 @@ const Home = () => {
 
     return (
         <div>
-                    <img src='../header-img.webp' alt="header-img" />
+                    <img src='https://wallpaperforu.com/wp-content/uploads/2021/09/Coding-Wallpapers51680x1050.jpg' alt="header-img" />
                     <div>{quizData.map(quiz => <Quiz key={quizData.id} quiz={quiz}></Quiz>)}</div>
         </div>
     );
